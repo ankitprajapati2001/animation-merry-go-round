@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .main {
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 700px;
+
+            /* border: 2px solid black; */
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            height: 100px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        h1 {
+            
+            z-index: 1;
+        }
+
+        .main::before {
+            content: "";
+            height: 300px;
+            width: 800px;
+            background-color: aqua;
+            animation: rotate 5s infinite;
+        }
+
+        .main::after {
+            content: "";
+            background-color: white;
+            position: absolute;
+            inset: 10px;
+
+        }
+
+        @keyframes rotate {
+
+            from {}
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1742800389~exp=1742803989~hmac=e822aa8e1edaa83e54c5231701e05580aaeef39628e1af4673d86e3835304a96&w=740"
+            alt="">
+        <h1>Ankit</h1>
+    </div>
+
+</body>
+
+</html>
